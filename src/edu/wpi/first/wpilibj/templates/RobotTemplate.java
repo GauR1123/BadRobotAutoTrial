@@ -32,15 +32,18 @@ public class RobotTemplate extends SimpleRobot {
     CANJaguar bRight;
     Timer timer = new Timer(); // timer
 
-
-    public void autonomous()
-    {
+    public void robotInit() {
         try {
             CANJaguar fLeft = new CANJaguar(10); // motors for wheels with CAN ports as arguements
             CANJaguar fRight = new CANJaguar(4);
             CANJaguar bLeft = new CANJaguar(9);
             CANJaguar bRight = new CANJaguar(7);
         } catch (Exception e) { e.printStackTrace(); }
+    }
+
+    public void autonomous()
+    {
+
         System.out.print("autonomous starts");
         timer.start(); // obvious
         while (timer.get() < 5000000) // drive for 5s
