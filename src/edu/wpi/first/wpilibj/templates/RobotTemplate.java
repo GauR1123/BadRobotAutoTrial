@@ -26,22 +26,30 @@ public class RobotTemplate extends SimpleRobot {
      */
     Joystick j1 = new Joystick(1); // Well what do you think??
     Joystick j2 = new Joystick(2);
-    CANJaguar fLeft = new CANJaguar(10); // motors for wheels with CAN ports as arguements
-    CANJaguar fRight = new CANJaguar(4);
-    CANJaguar bLeft = new CANJaguar(9);
-    CANJaguar bRight = new CANJaguar(7);
+    CANJaguar fLeft;
+    CANJaguar fRight;
+    CANJaguar bLeft;
+    CANJaguar bRight;
     Timer timer = new Timer(); // timer
 
 
     public void autonomous()
     {
+        try {
+            CANJaguar fLeft = new CANJaguar(10); // motors for wheels with CAN ports as arguements
+            CANJaguar fRight = new CANJaguar(4);
+            CANJaguar bLeft = new CANJaguar(9);
+            CANJaguar bRight = new CANJaguar(7);
+        } catch (Exception e) { e.printStackTrace(); }
         System.out.print("autonomous starts");
         timer.start(); // obvious
         while (timer.get() < 5000000) // drive for 5s
         {
             System.out.print("current time"+timer.get());
-            fLeft.set(0.5); // to make it move at 0.5 power 
-            fRight.set(0.5);    
+            try {
+                fLeft.setX(0.5); // DEPRECATED METHOD NO JUTSU
+                fRight.setX(0.5);
+            } catch(Exception e) { e.printStackTrace(); }
         }
         timer.stop();  // stop
     }
