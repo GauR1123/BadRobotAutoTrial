@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Ant-Version: Apache Ant 1.8.1
 Created-By: 1.6.0_18-b07 (Sun Microsystems Inc.)
-MIDlet-Name: TeSt2
+MIDlet-Name: 2011 Code 2.0
 MIDlet-Version: 1.0.0
 MIDlet-Vendor: FIRST
 MIDlet-1: RobotTemplate, , edu.wpi.first.wpilibj.templates.RobotTempla

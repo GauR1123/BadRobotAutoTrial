@@ -1,4 +1,4 @@
-MIDlet-Name: TeSt2
+MIDlet-Name: 2011 Code 2.0
 MIDlet-Version: 1.0.0
 MIDlet-Vendor: FIRST
 MIDlet-1: RobotTemplate, , edu.wpi.first.wpilibj.templates.RobotTemplate
